@@ -65,6 +65,8 @@
 			<groupId>org.openapitools</groupId>
 			<artifactId>openapi-java-client</artifactId>
 			<version>2020-11-13</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/libs/openapi-java-client-2020-11-13.jar</systemPath>
 		</dependency>
 
         <dependency>
@@ -79,6 +81,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
 				<!--<configuration>
 					<jvmArguments>
 						-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
