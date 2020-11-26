@@ -32,7 +32,7 @@ public class OrderController {
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        logMessages(mapper, order, (POSTOrderRequestType.class.getName() + ":Request message"));
+        logMessages(mapper, order, (POSTOrderRequestType.class.getName() + ": Request message"));
         String url = env.getProperty("baseURL") + "/v1/orders";
         MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter(mapper);
         RestTemplate restTemplate = new RestTemplate();
